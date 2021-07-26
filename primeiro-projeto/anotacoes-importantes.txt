@@ -1,0 +1,42 @@
+yarn init -y
+cria o arquivo package.json (-y ja automatiza algumas configurações)
+
+yarn add express
+adiciona o micro framework express
+cria a pasta node_modules, que tem várias dependências
+
+node (caminho do index.js)
+inicia a aplicação
+
+yarn dev
+inicia a aplicação (usando o nodemon)
+
+yarn add nodemon -d
+adiciona o nodemon como dependência de desenvolvimento
+nodemon da um reload automático na aplicação sempre que houver alguma alteração
+
+adicionar o seguinte código ao package.json, após "license":
+"scripts": {
+    "dev": "nodemon src/index.js (caminho do index do projeto)"
+},
+com isso o nodemon irá atualizar automaticamente a aplicação
+
+yarn add uuid
+adiciona a biblioteca uuid
+
+tipos de requisições
+GET - Buscar uma informação dentro do servidor
+POST - Inserir uma informação no servidor
+PUT - Alterar uma informação no servidor
+PATCH - Alterar uma informação específica
+DELETE - Deletar uma informação no servidor
+
+TIPOS DE PARÂMETROS
+Route Params => parâmetros recebidos encapsulados na rota
+Servem para identificar um recurso, editar, deletar ou buscar tal recurso
+
+Query Params => Paginação, filtro
+São opcionais, diferentemente dos route params, que são obrigatórios
+
+Body Params => objetos para inserção/alteração (JSON)
+        

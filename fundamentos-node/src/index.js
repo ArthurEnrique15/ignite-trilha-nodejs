@@ -16,27 +16,6 @@ app.get("/", (request, response) => {
 });
 */
 
-/**
- * GET - Buscar uma informação dentro do servidor
- * POST - Inserir uma informação no servidor
- * PUT - Alterar uma informação no servidor
- * PATCH - Alterar uma informação específica
- * DELETE - Deletar uma informação no servidor
- */
-
-/**
- * TIPOS DE PARÂMETROS
- * 
- * Route Params => parâmetros recebidos encapsulados na rota
- * Servem para identificar um recurso, editar, deletar ou buscar tal recurso
- * 
- * Query Params => Paginação, filtro
- * São opcionais, diferentemente dos route params, que são obrigatórios
- * 
- * Body Params => objetos para inserção/alteração (JSON)
- * 
- */
-
 app.get("/courses", (request, response) => {
     const query = request.query;
     console.log(query);
