@@ -1,0 +1,15 @@
+yarn add @types/express -D
+sempre que for necessário instalar os tipos de uma biblioteca, utilizamos yarn add @types/biblioteca
+o -D é para adicionar a biblioteca como dependência de desenvolvimento
+
+yarn add typescript -D
+adiciona a biblioteca do typescript como dependência de desenvolvimento
+
+yarn tsc --init
+inicia o typescript, cria o arquivo tsconfig.json
+
+yarn tsc
+cria uma cópia dos arquivos ts como javascript, de uma forma mais fácil para o node entender
+
+outDir => dentro do tsconfig.json
+caminho onde as cópias dos arquivos feitas com o comando yarn tsc serão armazenadas
