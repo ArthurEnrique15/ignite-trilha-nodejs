@@ -20,3 +20,11 @@ yarn add uuid
 
 yarn add @types/uuid -D
     adicionar o tipo uuid como dependencia de desenvolvimento
+
+SOLID
+    5 princípios
+    S => SRP - Single Responsibility Principle (Princípio da Responsabilidade Única)
+    O => OCP - Open-Closed Principle (Princípio aberto/fechado)
+    L => LSP - Liskov Substitution Principle (Princípio de Subtituição de Liskov)
+    I => ISP - Interface Segregation Principle (Princípio da segragação de Interface)
+    D => DIP - Dependency Inversion Principle (Princípio da Inversão de Dependência)
