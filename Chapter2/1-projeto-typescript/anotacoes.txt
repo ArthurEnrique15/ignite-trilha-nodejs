@@ -1,3 +1,8 @@
+typescript 
+é uma linguagem open source da microsoft
+ele é composto pelo javascript com algumas features a mais
+tem uma tipagem estática, ou seja, não é possível alterar o tipo da variável após declará-la
+
 yarn add @types/express -D
 sempre que for necessário instalar os tipos de uma biblioteca, utilizamos yarn add @types/biblioteca
 o -D é para adicionar a biblioteca como dependência de desenvolvimento

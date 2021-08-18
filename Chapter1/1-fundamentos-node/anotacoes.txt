@@ -1,0 +1,36 @@
+conceitos do node
+    - node.js é uma plataforma open-source que permite a execução do js do lado do servidor
+    - composto pela v8 (interpretador de js criado pela google), libuv (biblioteca multiplataforma) + conjunto de módulos
+    - arquitetura event loop (call stack)
+    - single thread
+    - non blocking I/O
+        - tendo dois métodos a e b, não é necessário que o método a termine para que o b seja executado
+
+gerenciadores de pacotes
+    - npm e yarn
+    - servem para instalar bibliotecas externas e disponibilizar bibliotecas
+
+frameworks
+    - express
+    - egg.js
+    - nest.js
+    - adonis.js
+
+conceitos API rest
+    API: Application programming interface
+        - conjunto de especificações de possíveis interações entre aplicações
+        - documentação para desenvolvedores é muito importante
+
+    REST: Representation State Transfer
+        - modelo de arquitetura
+        - 6 regras
+            - client server
+            - stateless (o servidor não armazena nenhum estado ou sessão das requisições)
+            - cache
+            - interface uniforme
+                - identificação dos recursos
+                - representação dos recursos
+                - mensagens auto descritivas
+                - HATEOAS (hypertext as the engine of application state)
+            - camadas
+            - código sob demanda

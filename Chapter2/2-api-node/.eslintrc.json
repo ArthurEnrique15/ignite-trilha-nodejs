@@ -1,7 +1,7 @@
 {
     "env": {
         "es2021": true,
-        "node": true,
+        "browser": true,
         "jest": true
     },
     "extends": [
@@ -62,6 +62,7 @@
         ],
         "prettier/prettier": "error"
     },
+    
     "settings": {
         "import/resolver": {
           "typescript": {}
