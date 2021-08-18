@@ -1,4 +1,4 @@
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
 interface IRequest {
     name: string;
@@ -7,7 +7,8 @@ interface IRequest {
 
 // Classe com a responsabilidade única de criar uma categoria
 class CreateCategoryService {
-    constructor(private categoriesRepository: CategoriesRepository) {}
+    // Princípio de substituição de Liskov: utilizando a interface aqui, podemos passar qualquer classe que implementar essa interface, então ao criar uma categoria, não precisamos nos preocupar com como os dados são salvos, ou qual o tipo de banco de dados.
+    constructor(private categoriesRepository: ICategoriesRepository) {}
 
     execute({ description, name }: IRequest): void {
         const categoryAlreadyExists =
