@@ -1,13 +1,22 @@
 yarn add ts-node-dev -D
-adiciona a biblioteca ts-node-dev como dependência de desenvolvimento
-auxilia na hora de rodar o server, pois a própria biblioteca faz a conversão do ts para o js
+    adiciona a biblioteca ts-node-dev como dependência de desenvolvimento
+    auxilia na hora de rodar o server, pois a própria biblioteca faz a conversão do ts para o js
 
 "scripts": {
     "dev":"ts-node-dev --tranpile-only --ignore-watch node_modules --respawn src/server.ts"
 },
-adicionar o script no package.json para fazer a bibiloteca funcionar
-algumas configurações adicionais para fazer o server rodar mais rapidamente
+    adicionar o script no package.json para fazer a bibiloteca funcionar
+    algumas configurações adicionais para fazer o server rodar mais rapidamente
 
 comentar o "strict": true dentro do arquivo tsconfig.json
-opção do js para checar os erros da aplicação
-desabilitar para deixar essa responsabilidade de checar os erros para o ts
+    opção do js para checar os erros da aplicação
+    desabilitar para deixar essa responsabilidade de checar os erros para o ts
+
+usando o debug
+    alterar o script dentro de package.json, adicionando --inspect após ts-node-dev
+
+yarn add uuid
+    adicionar a biblioteca uuid
+
+yarn add @types/uuid -D
+    adicionar o tipo uuid como dependencia de desenvolvimento
