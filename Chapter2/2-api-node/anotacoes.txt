@@ -29,3 +29,7 @@ SOLID
         Exemplo: Tendo CategoriesRepository e PostGresCategoriesRepositories, essas duas classes devem implementar uma interface ICategoriesRepository, assim não precisamos especificar como os métodos da interface estão sendo implementados ao precisarmos dessas duas classes.
     I => ISP - Interface Segregation Principle (Princípio da segragação de Interface)
     D => DIP - Dependency Inversion Principle (Princípio da Inversão de Dependência)
+
+Multer
+    biblioteca para realizar o upload de arquivos
+    
