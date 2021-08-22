@@ -1,10 +1,16 @@
 import express from "express";
+import swaggerUi from "swagger-ui-express";
 
 import { router } from "./routes";
+import swaggerFile from "./swagger.json";
 
 const app = express();
 
 app.use(express.json());
+
+// rota na qual a documentação será disponibilizada
+// setup -> arquivo json onde fica toda a documentação da api
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use(router);
 
