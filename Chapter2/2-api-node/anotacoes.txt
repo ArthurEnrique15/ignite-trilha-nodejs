@@ -32,4 +32,10 @@ SOLID
 
 Multer
     biblioteca para realizar o upload de arquivos
+
+Leitura de Arquivos
+    stream - por exemplo, ao ver um vídeo no youtube, ele é baixado em partes, não tudo de uma vez
+
+csv-parse
+    biblioteca para leitura e escrita de arquvos .csv
     

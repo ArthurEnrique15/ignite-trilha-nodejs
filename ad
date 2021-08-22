@@ -1,0 +1,95 @@
+[33mcommit 431ecb20397c363e32239eac37f5ae8d660a2ba5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 20:50:02 2021 -0300
+
+    [CHAPTER 2] Criando o use case para importar categorias utilizando arquivos
+
+[33mcommit 8d8aca90f53763620446f948edfb2d8dd46494ff[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 20:37:50 2021 -0300
+
+    [CHAPTER 2] Criando upload de arquivos
+
+[33mcommit 7da7e2ddf32e8326e4d210325ce07b79b3cb700e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 20:24:54 2021 -0300
+
+    [CHAPTER 2] Separando os repositórios, criando use case de especificação e refatorando as rotas
+
+[33mcommit df8bb49a45d469f865a9a51649e0dfba52758e95[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 20:00:12 2021 -0300
+
+    [CHAPTER 2] Adicionando o padrão singleton para conseguir realizar a listagem de categorias
+
+[33mcommit 3357ec3cfdb232f016b633a1b977f7449dd847fd[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 19:51:56 2021 -0300
+
+    [CHAPTER 2] Refatorando a listagem de categoria
+
+[33mcommit 64975d928a84aa8ae47fa95c20f81949cc2592c6[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 18:35:47 2021 -0300
+
+    [CHAPTER 2] Criando repositório de especificação
+
+[33mcommit ac4087c286932b601ef2aa6b2fe55d81efa0081f[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Sat Aug 21 18:04:30 2021 -0300
+
+    [CHAPTER 2] Separando a aplicaçao em modulos
+
+[33mcommit 391be4fc3fac38ca9b5c5572db4fa2af193e846c[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Wed Aug 18 02:18:32 2021 -0300
+
+    [CHAPTER 2] Utilizando o princípio da substituição de Liskov
+
+[33mcommit cf5058b1ecf89e11f50339cb692ed4463c9c7e13[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Wed Aug 18 00:49:54 2021 -0300
+
+    [CHAPTER 2] Utilizando o princípio de responsabilidade única
+
+[33mcommit 935b2e7e04c2a350668a8f5233535d2bab9ac8f1[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Wed Aug 18 00:06:40 2021 -0300
+
+    [CHAPTER 2] adicionando validaçao para nao poder cadastrar duas categorias com o mesmo nome
+
+[33mcommit ccb130d8c3482ac3ee882f7001175ac1d62124b1[m
+Author: ArthurEnrique15 <arthurenrique1512@gmail.com>
+Date:   Tue Aug 17 23:57:16 2021 -0300
+
+    [CHAPTER 2] criando o cadastro e listagem de categorias
+
+[33mcommit e17c6492e1f83d1262d66584bcefc3d0c1fd6cfd[m
+Author: Arthur <arthurenrique1512@gmail.com>
+Date:   Tue Aug 17 21:06:20 2021 -0300
+
+    [CHAPTER 2] configurando ts-node-dev
+
+[33mcommit ff776d0b005ef38a60409b94055430db08afd5d4[m
+Author: Arthur Silva <arthurenrique1512@gmail.com>
+Date:   Tue Aug 3 20:23:34 2021 -0300
+
+    adicionando eslint e prettier - padronização de código
+
+[33mcommit 376da47531c35e1f66b357972debdfc7ae300281[m
+Author: Arthur Silva <arthurenrique1512@gmail.com>
+Date:   Tue Jul 27 12:44:36 2021 -0300
+
+    Começando com o Typescript
+
+[33mcommit 7e08f60131ea3fba28cb7f9cee75356e13fd6475[m
+Author: Arthur Silva <arthurenrique1512@gmail.com>
+Date:   Mon Jul 26 00:24:10 2021 -0300
+
+    primeiro projeto em node
+
+[33mcommit 55e936995fa036af005658c161ea07bc42a1a4cf[m
+Author: Arthur Silva <arthurenrique1512@gmail.com>
+Date:   Sat Jul 24 10:53:46 2021 -0300
+
+    Fundamentos do NodeJS
