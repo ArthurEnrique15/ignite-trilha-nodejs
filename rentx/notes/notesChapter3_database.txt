@@ -1,0 +1,6 @@
+migrations
+    versionamento de tudo que fazemos no banco de dados
+
+yarn typeorm migration:run -> roda todas as migrations
+
+yarn typeorm migration:revert -> reverte todas as migrations

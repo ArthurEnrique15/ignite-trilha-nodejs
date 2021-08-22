@@ -1,0 +1,53 @@
+Docker
+    ferramenta que auxilia na criação de containers
+
+    containers seriam ambientes isolados dentro da nossa máquina
+
+    imagens: instruções apra criação de um container
+
+    o que roda localmente roda em produção
+
+    permite que a gente utilize o mesmo SO dentre os containers, assim conseguimos compartilhar os recursos da máquina host
+
+    hub.docker.com/search -> todas as imagens disponíveis para uso com o docker
+
+docker build -t name (rentx)
+    cria o docker
+
+docker run -p port:port (3333:3333) name (rentx)
+    roda o docker
+    -p -> mapeamento das portas, ou seja, sempre que no localhost chamar 3333 o docker deve procurar o container que tem a porta 3333
+
+docker-compose -> orquestrador de containers
+
+comandos docker
+
+    docker ps -> lista de todos os containers que estão rodando
+
+    docker ps -a -> lista todos os containers, inclusive os que não estão rodando
+
+    docker rm (id) -> remove o container
+
+    docker start (id) -> inicia o container
+
+    docker stop (id) -> para o container
+
+    docker-compose up -> inicia a api usando o docker compose
+
+    docker-compose up -d -> faz a api rodar em background, mesmo se fechar o terminal ela continua rodando
+
+    docker-compose stop -> para a execução do container
+
+    docker-compose down -> apaga o container
+
+    docker-compose start -> inicia a execução do container
+
+    docker-compose up -d —force-recreate -> inicia forçando a recriação dos containers
+
+    docker exec -it name (rentx) /bin/bash -> move para a pasta do container
+    para sair, basta apertar control+d
+
+    docker logs name (rentx) -f -> exibe os logs que estão sendo executados
+    para sair, apertar control+c
+
+    docker exec name cat /etc/hosts -> exibe informações, como por exemplo o ip
