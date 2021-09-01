@@ -1,3 +1,5 @@
+import { inject, injectable } from "tsyringe";
+
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -6,11 +8,15 @@ interface IRequest {
 }
 
 // Classe com a responsabilidade única de criar uma categoria
+@injectable()
 class CreateCategoryUseCase {
     // Princípio de substituição de Liskov: utilizando a interface aqui, podemos passar qualquer classe que implementar essa interface, então ao criar uma categoria, não precisamos nos preocupar com como os dados são salvos, ou qual o tipo de banco de dados.
 
     // O private é usado para ter acesso ao this
-    constructor(private categoriesRepository: ICategoriesRepository) {}
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository
+    ) {}
 
     // desestruturação do IRequest
     async execute({ description, name }: IRequest): Promise<void> {

@@ -1,8 +1,8 @@
 import { Router } from "express";
 import multer from "multer";
 
-import createCategoryController from "../modules/cars/useCases/createCategory";
-import { importCategoryController } from "../modules/cars/useCases/ImportCategory";
+import { CreateCategoryController } from "../modules/cars/useCases/createCategory/CreateCategoryController";
+import { importCategoryController } from "../modules/cars/useCases/importCategory";
 import { listCategoriesController } from "../modules/cars/useCases/listCategories";
 
 const categoriesRoutes = Router();
@@ -12,11 +12,15 @@ const upload = multer({
     dest: "./tmp",
 });
 
+const createCategoryController = new CreateCategoryController();
+
 // cadastro de categoria
 // rota recebe a requisição, chama o serviço, executa algo e da o retorno
-categoriesRoutes.post("/", (request, response) => {
-    return createCategoryController().handle(request, response);
-});
+// categoriesRoutes.post("/", (request, response) => {
+//     return createCategoryController().handle(request, response);
+// });
+
+categoriesRoutes.post("/", createCategoryController.handle);
 
 // listagem de categorias
 categoriesRoutes.get("/", (request, response) => {
