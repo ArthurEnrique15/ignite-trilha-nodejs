@@ -1,6 +1,7 @@
 // módulo nativo do node - file system
 import csvParse from "csv-parse";
 import fs from "fs";
+import { inject, injectable } from "tsyringe";
 
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
@@ -9,8 +10,12 @@ interface IImportCategory {
     description: string;
 }
 
+@injectable()
 class ImportCategoryUseCase {
-    constructor(private categoriesRepository: ICategoriesRepository) {}
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository
+    ) {}
 
     // utiliza uma promise para o programa aguardar o retorno da função
     loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
@@ -48,10 +53,12 @@ class ImportCategoryUseCase {
         categories.map(async (category) => {
             const { name, description } = category;
 
-            const existCategory = this.categoriesRepository.findByName(name);
+            const existCategory = await this.categoriesRepository.findByName(
+                name
+            );
 
             if (!existCategory) {
-                this.categoriesRepository.create({ name, description });
+                await this.categoriesRepository.create({ name, description });
             }
         });
     }
