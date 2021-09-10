@@ -1,0 +1,23 @@
+bcrypt
+    biblioteca para criptografia de senha
+
+JWT (JSON web token)
+    autenticação
+
+    haverá uma rota de sessão na qual o usuário passa o email e a senha, então é feita uma verificação para ver se o usuário está cadastrado, caso esteja, é gerado um token para ele
+
+    assim, o usuário precisará passar esse token toda vez que for realizar uma requisição
+
+    com isso é possível controlar quem consegue fazer as requisições da aplicação
+
+    o token garante que um usuário está autenticado e quais permissões ele possui ou não
+
+    o JWT é composto por 3 partes:
+        header -> é composto basicamente pelo tipo e qual algoritmo do hash ele está utilizando
+
+        payload -> podemos passar algumas informações, como email, nome, etc
+            é importante não passar dados críticos como senha no payload
+
+        verify signature -> composto pelo header e pelo payload
+
+    
