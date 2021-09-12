@@ -33,6 +33,11 @@ export class CreateUsers1630521056170 implements MigrationInterface {
                         default: "false",
                     },
                     {
+                        name: "avatar",
+                        type: "varchar",
+                        isNullable: true,
+                    },
+                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()",
