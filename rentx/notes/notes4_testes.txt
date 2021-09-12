@@ -41,3 +41,5 @@ alterações no jest.config.ts
     descomentar o testEnvironment e alterá-lo para ["**/*.spec.ts"] (mapear todos os arquivos terminados com .spec.ts)
 
     descomentar o bail e alterá-lo para true (faz com que a execução dos testes seja interrompida caso algum teste dê errado)
+
+yarn test

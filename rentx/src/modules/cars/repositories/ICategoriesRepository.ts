@@ -1,4 +1,4 @@
-import { Category } from "../entities/Category";
+import { Category } from "../infra/typeorm/entities/Category";
 
 // DTO => Data transfer object
 // Criar um objeto responsável por transferir os dados entre uma camada e outra
