@@ -1,0 +1,43 @@
+Testes unitários
+    testar pedaços da aplicação
+
+    testar a regra de negócio da aplicação
+
+    acesso ao banco de dados ou APIs externas não é testado
+
+    o foco é a regra de negócio
+
+Testes de integração
+    testar a aplicação inteira, o fluxo competo da aplicação
+
+    route -> controller -> useCase -> repository
+
+Os testes são feitos em um banco de testes, nunca no banco real
+
+TDD (Test Driven Development)
+    Metodologia utilizada para fazer os testes
+
+    Primeiro são feitos os testes, depois o resto da aplicação
+
+Biblioteca para fazer os testes: JEST
+
+yarn add jest @types/jest -D
+
+yarn jest --init
+    use jest when running test script in package.json? y
+    use Typescript for the configuration file? y
+    choose the test environment -> node
+    add coverage reports? n
+    provider -> v8
+    automatically clear mock calls? y
+
+yarn add ts-jest -D
+
+alterações no jest.config.ts
+    descomentar o preset e modificar a propriedade de undefined para "ts-jest"
+
+    descomentar o testEnvironment e alterá=lo para "node"
+
+    descomentar o testEnvironment e alterá-lo para ["**/*.spec.ts"] (mapear todos os arquivos terminados com .spec.ts)
+
+    descomentar o bail e alterá-lo para true (faz com que a execução dos testes seja interrompida caso algum teste dê errado)
