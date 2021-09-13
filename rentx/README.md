@@ -30,10 +30,6 @@ O usuário não precisa estar logado para realizar a listagem de carros
 
 Deve ser possível cadastrar uma especificação para um carro
 
-Deve ser possível listar todas as especificações
-
-Deve ser possível listar todos os carros
-
 **Regras de Negócio**
 
 Não deve ser possível cadastrar uma especificação para um carro não cadastrado
