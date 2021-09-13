@@ -44,8 +44,6 @@ Apenas usuários administradores podem realizar o cadastro
 
 Deve ser possível cadastrar a imagem do carro
 
-Deve ser possível listar todos os carros (disponíveis ou não disponíveis)
-
 **Requsitos Não Funcionais (RNF)**
 
 Utilizar o multer para upload dos arquivos
