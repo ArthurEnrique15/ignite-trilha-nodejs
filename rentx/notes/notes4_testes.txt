@@ -43,3 +43,6 @@ alterações no jest.config.ts
     descomentar o bail e alterá-lo para true (faz com que a execução dos testes seja interrompida caso algum teste dê errado)
 
 yarn test
+
+SuperTest
+    ferramenta para realização dos testes de integração
