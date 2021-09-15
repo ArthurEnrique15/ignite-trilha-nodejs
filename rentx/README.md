@@ -91,3 +91,5 @@ Ao realizar a devolução, deverá ser calculado o total do aluguel
 Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrada uma multa proporcional aos dias de atraso
 
 Caso haja multa, o valor da mesma deverá ser somado ao valor total do aluguel
+
+O usuário deve estar logado na aplicação
