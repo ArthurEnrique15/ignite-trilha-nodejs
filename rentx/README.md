@@ -70,4 +70,24 @@ Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para
 
 O usuário deve estar logado na aplicação
 
+Ao realizar um aluguel, o status do carro deverá ser modificado para indisponível
 
+# Devolução de carro
+
+**Requsitos Funcionais (RF)**
+
+Deve ser possível realizar a devolução de um carro alugado
+
+**Regras de Negócio**
+
+Se o carro for devolvido com menos de 24 horas, deverá ser cobrada uma diária completa
+
+Ao realizar a devolução, o carro deverá ser liberado para outro aluguel
+
+Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel
+
+Ao realizar a devolução, deverá ser calculado o total do aluguel
+
+Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrada uma multa proporcional aos dias de atraso
+
+Caso haja multa, o valor da mesma deverá ser somado ao valor total do aluguel
