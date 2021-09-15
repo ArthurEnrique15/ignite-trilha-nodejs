@@ -27,43 +27,28 @@ describe("Create category controller", () => {
         await connection.close();
     });
 
-    it("Should be able to create a new category", async () => {
+    it("Should be able to list all categories", async () => {
         const responseToken = await request(app)
             .post("/sessions")
             .send({ email: "admin@admin.com", password: "admin" });
 
         const { token } = responseToken.body;
 
-        const response = await request(app)
+        await request(app)
             .post("/categories")
             .send({
-                name: "create_category_test",
+                name: "list_categories_test",
                 description: "description_test",
             })
             .set({
                 Authorization: `Bearer ${token}`,
             });
 
-        expect(response.status).toBe(201);
-    });
+        const response = await request(app).get("/categories");
 
-    it("Should not be able to create a new category with an existing name", async () => {
-        const responseToken = await request(app)
-            .post("/sessions")
-            .send({ email: "admin@admin.com", password: "admin" });
-
-        const { token } = responseToken.body;
-
-        const response = await request(app)
-            .post("/categories")
-            .send({
-                name: "create_category_test",
-                description: "description_test",
-            })
-            .set({
-                Authorization: `Bearer ${token}`,
-            });
-
-        expect(response.status).toBe(400);
+        expect(response.status).toBe(200);
+        expect(response.body.length).toBe(1);
+        expect(response.body[0]).toHaveProperty("id");
+        expect(response.body[0].name).toEqual("list_categories_test");
     });
 });
