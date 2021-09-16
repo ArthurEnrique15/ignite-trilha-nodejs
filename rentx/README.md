@@ -1,6 +1,6 @@
 # Cadastro de carro
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível cadastrar um novo carro
 
@@ -14,7 +14,7 @@ Apenas usuários administradores podem realizar o cadastro
 
 # Listagem de carros
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível listar todos os carros disponíveis
 
@@ -26,7 +26,7 @@ O usuário não precisa estar logado para realizar a listagem de carros
 
 # Cadastro de Especificação do carro
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível cadastrar uma especificação para um carro
 
@@ -40,11 +40,11 @@ Apenas usuários administradores podem realizar o cadastro
 
 # Cadastro de imagens do carro
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível cadastrar a imagem do carro
 
-**Requsitos Não Funcionais (RNF)**
+**Requisitos Não Funcionais (RNF)**
 
 Utilizar o multer para upload dos arquivos
 
@@ -56,7 +56,7 @@ O usuário deve poder cadastrar mais de uma imagem para o mesmo carro
 
 # Aluguel de carro
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível cadastrar um aluguel
 
@@ -74,7 +74,7 @@ Ao realizar um aluguel, o status do carro deverá ser modificado para indisponí
 
 # Devolução de carro
 
-**Requsitos Funcionais (RF)**
+**Requisitos Funcionais (RF)**
 
 Deve ser possível realizar a devolução de um carro alugado
 
@@ -91,5 +91,15 @@ Ao realizar a devolução, deverá ser calculado o total do aluguel
 Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrada uma multa proporcional aos dias de atraso
 
 Caso haja multa, o valor da mesma deverá ser somado ao valor total do aluguel
+
+O usuário deve estar logado na aplicação
+
+# Listagem de alugueis para usuário
+
+**Requisitos Funcionais (RF)**
+
+Deve ser possível realizar a busca de todos os alugueis para o usuário
+
+**Regras de Negócio**
 
 O usuário deve estar logado na aplicação
