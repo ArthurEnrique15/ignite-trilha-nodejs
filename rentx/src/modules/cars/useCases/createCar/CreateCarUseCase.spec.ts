@@ -26,30 +26,6 @@ describe("Create Car", () => {
         expect(car).toHaveProperty("id");
     });
 
-    it("Should not be able to create a new car with an existing license plate", async () => {
-        expect(async () => {
-            await createCarUseCase.execute({
-                name: "Car test 1",
-                description: "Description of the test car",
-                daily_rate: 100,
-                license_plate: "ABCD-1234",
-                fine_amount: 60,
-                brand: "Brand test",
-                category_id: "Category test",
-            });
-
-            await createCarUseCase.execute({
-                name: "Car test 2",
-                description: "Description of the test car",
-                daily_rate: 100,
-                license_plate: "ABCD-1234",
-                fine_amount: 60,
-                brand: "Brand test",
-                category_id: "Category test",
-            });
-        }).rejects.toBeInstanceOf(AppError);
-    });
-
     it("Should be able to create a car with property available true by default", async () => {
         const car = await createCarUseCase.execute({
             name: "Car test",
@@ -62,5 +38,29 @@ describe("Create Car", () => {
         });
 
         expect(car.available).toBe(true);
+    });
+
+    it("Should not be able to create a new car with an existing license plate", async () => {
+        await createCarUseCase.execute({
+            name: "Car test 1",
+            description: "Description of the test car",
+            daily_rate: 100,
+            license_plate: "ABCD-1234",
+            fine_amount: 60,
+            brand: "Brand test",
+            category_id: "Category test",
+        });
+
+        await expect(
+            createCarUseCase.execute({
+                name: "Car test 2",
+                description: "Description of the test car",
+                daily_rate: 100,
+                license_plate: "ABCD-1234",
+                fine_amount: 60,
+                brand: "Brand test",
+                category_id: "Category test",
+            })
+        ).rejects.toEqual(new AppError("Car already exists"));
     });
 });
