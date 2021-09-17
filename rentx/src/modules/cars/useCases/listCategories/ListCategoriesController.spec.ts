@@ -8,7 +8,7 @@ import createConnection from "@shared/infra/typeorm";
 
 let connection: Connection;
 
-describe("Create category controller", () => {
+describe("List category controller", () => {
     beforeAll(async () => {
         connection = await createConnection();
         await connection.runMigrations();
@@ -32,7 +32,7 @@ describe("Create category controller", () => {
             .post("/sessions")
             .send({ email: "admin@admin.com", password: "admin" });
 
-        const { token } = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         await request(app)
             .post("/categories")
@@ -41,7 +41,7 @@ describe("Create category controller", () => {
                 description: "description_test",
             })
             .set({
-                Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${refresh_token}`,
             });
 
         const response = await request(app).get("/categories");
