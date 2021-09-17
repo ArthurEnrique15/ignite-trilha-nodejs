@@ -12,7 +12,7 @@ class SendRecoverPasswordMailController {
 
         await sendRecoverPasswordMailUseCase.execute(email);
 
-        return null;
+        return response.status(200).send();
     }
 }
 
