@@ -1,3 +1,4 @@
+import "dotenv/config";
 import "reflect-metadata";
 import express, { NextFunction, Response, Request } from "express";
 // o express não sabe lidar com os throws, então precisamos dessa biblioteca para tratar os erros
@@ -5,6 +6,7 @@ import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 
 import "@shared/container";
+import upload from "@config/upload";
 import { AppError } from "@shared/errors/AppError";
 import { router } from "@shared/infra/http/routes";
 import createConnection from "@shared/infra/typeorm";
@@ -16,6 +18,9 @@ createConnection();
 const app = express();
 
 app.use(express.json());
+
+app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`));
+app.use("/cars", express.static(`${upload.tmpFolder}/cars`));
 
 // rota na qual a documentação será disponibilizada
 // setup -> arquivo json onde fica toda a documentação da api
